@@ -11,6 +11,14 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundLayer;
 
 	private Vector3 velocity;
+
+	void LateUpdate()
+	{
+		if (transform.position.y < -10)
+		{
+			transform.position = new Vector3(0f, 100f, 0f);
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +46,6 @@ public class PlayerController : MonoBehaviour {
 
 	private bool isGrounded()
 	{
-		return Physics.Raycast(transform.position, -Vector3.up, 1.1f, groundLayer);
+		return Physics.Raycast(transform.position, -Vector3.up, 1.4f, groundLayer);
 	}
 }
