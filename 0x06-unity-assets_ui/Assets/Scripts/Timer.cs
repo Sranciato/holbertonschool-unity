@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour {
 	private float startTime, t = 0, holdTime = 0;
 	private bool hasWon, pauseToggle;
 	string saveTime = "";
+	public Text winCanvasText;
 
 	void Start()
 	{
@@ -25,11 +26,15 @@ public class Timer : MonoBehaviour {
 		}
 		else
 		{
-			timerText.text = saveTime;
-			timerText.fontSize = 60;
-			timerText.color = Color.green;
+			Win();
 		}
 
+	}
+
+	public void Win()
+	{
+		winCanvasText.text = saveTime;
+		timerText.enabled = false;
 	}
 
 	public void StopTimer()

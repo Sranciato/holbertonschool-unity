@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour {
 	public Transform playerBody, target;
 	public float mouseSensitivity = 100f;
 	float mouseX, mouseY;
+	public bool isInverted;
 
 	void Start()
 	{

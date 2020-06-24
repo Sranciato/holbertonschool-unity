@@ -52,4 +52,13 @@ public class PauseMenu : MonoBehaviour {
 	{
 		SceneManager.LoadScene("Options");
 	}
+	public void Next()
+	{
+		if (SceneManager.GetActiveScene().name == "Level03")
+		{
+			SceneManager.LoadScene("MainMenu");
+		}
+		else
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
 }

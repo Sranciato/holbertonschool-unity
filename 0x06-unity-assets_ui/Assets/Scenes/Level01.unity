@@ -1423,7 +1423,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 698608756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 100}
+  m_LocalPosition: {x: 0, y: 1.25, z: 5.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1204679891}
@@ -1442,6 +1442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 890755401}
+  winCanvas: {fileID: 1527214034}
 --- !u!1 &704241808 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c5ffcd7229838c740a958c17783bb8ba, type: 3}
@@ -1900,20 +1901,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2054759815}
   m_Script: {fileID: 11500000, guid: 611899a8673257349aa3268ab6e95f12, type: 3}
---- !u!114 &890755402
+--- !u!114 &890755402 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890755394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114275266794402436, guid: 8fa3ade025fd680479a7e959888e978e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2054759815}
   m_Script: {fileID: 11500000, guid: c004eec022c75d345aafc367fc508458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 890755401}
-  pauseCanvas: {fileID: 1234391710}
-  optionsMenu: {fileID: 0}
 --- !u!1001 &892037879
 Prefab:
   m_ObjectHideFlags: 0
@@ -3116,6 +3109,11 @@ Transform:
   m_Father: {fileID: 1545546220}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1527214034 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1167314449073246, guid: 7a50f7b24850b4345abb7d03a587d802,
+    type: 2}
+  m_PrefabInternal: {fileID: 1612569048}
 --- !u!1001 &1534505868
 Prefab:
   m_ObjectHideFlags: 0
@@ -3784,6 +3782,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114583283137409238, guid: 7a50f7b24850b4345abb7d03a587d802,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 890755402}
     - target: {fileID: 114306887548128540, guid: 7a50f7b24850b4345abb7d03a587d802,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4952,11 +4955,16 @@ Prefab:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 265124745}
-    - target: {fileID: 114436748454932458, guid: 8fa3ade025fd680479a7e959888e978e,
+    - target: {fileID: 114838621859489312, guid: 8fa3ade025fd680479a7e959888e978e,
         type: 2}
-      propertyPath: isInverted
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: winCanvasText
+      value: 
+      objectReference: {fileID: 2064741968}
+    - target: {fileID: 114275266794402436, guid: 8fa3ade025fd680479a7e959888e978e,
+        type: 2}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 1234391710}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fa3ade025fd680479a7e959888e978e, type: 2}
   m_IsPrefabParent: 0
@@ -4964,6 +4972,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: c4c8db9f515363845b3aeb45ddbd46c8, type: 3}
   m_PrefabInternal: {fileID: 2051325350}
+--- !u!114 &2064741968 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974928216472274, guid: 7a50f7b24850b4345abb7d03a587d802,
+    type: 2}
+  m_PrefabInternal: {fileID: 1612569048}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2079870102 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 805726e347b78f64789dd274509ebd47, type: 3}

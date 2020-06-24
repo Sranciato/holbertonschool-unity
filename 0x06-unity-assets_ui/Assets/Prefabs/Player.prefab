@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 143256499163608276}
   - component: {fileID: 114547899722086194}
   - component: {fileID: 114838621859489312}
+  - component: {fileID: 114275266794402436}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -191,6 +192,20 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1885648753764700}
   m_Enabled: 1
+--- !u!114 &114275266794402436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451684152157366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c004eec022c75d345aafc367fc508458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 114838621859489312}
+  pauseCanvas: {fileID: 0}
+  optionsMenu: {fileID: 0}
 --- !u!114 &114436748454932458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +220,7 @@ MonoBehaviour:
   playerBody: {fileID: 4968844547172350}
   target: {fileID: 4828695888889086}
   mouseSensitivity: 350
+  isInverted: 1
 --- !u!114 &114547899722086194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
+  winCanvasText: {fileID: 0}
 --- !u!124 &124008400619387608
 Behaviour:
   m_ObjectHideFlags: 1
