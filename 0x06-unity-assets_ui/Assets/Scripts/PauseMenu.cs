@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public Timer timer;
 	public GameObject pauseCanvas;
+	public GameObject optionsMenu;
 
 	void Start()
 	{

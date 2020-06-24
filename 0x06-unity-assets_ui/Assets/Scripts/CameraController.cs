@@ -7,7 +7,6 @@ public class CameraController : MonoBehaviour {
 	public Transform playerBody, target;
 	public float mouseSensitivity = 100f;
 	float mouseX, mouseY;
-	public bool isInverted;
 
 	void Start()
 	{
@@ -16,7 +15,7 @@ public class CameraController : MonoBehaviour {
 
 	void Update () {
 		mouseX += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-		if (isInverted)
+		if (OptionsMenu.isInverted)
 			mouseY -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 		else
 			mouseY += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

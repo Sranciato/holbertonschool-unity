@@ -331,6 +331,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1516674348}
     m_Modifications:
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224241705168243354, guid: 01c6c288238ae6749acb031ed483080d,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -420,6 +425,31 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 894990008}
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498592924278492, guid: 01c6c288238ae6749acb031ed483080d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01c6c288238ae6749acb031ed483080d, type: 2}
@@ -1065,6 +1095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40260d52d24bad14599e09b8ced409bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invertYToggle: {fileID: 1330033790}
 --- !u!1 &911637793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,7 +1972,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894990008}
+        m_MethodName: SetInverted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
