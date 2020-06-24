@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
 	public Text timerText;
-	private float startTime;
-	private bool hasWon;
+	private float startTime, t = 0, holdTime = 0;
+	private bool hasWon, pauseToggle;
 	string saveTime = "";
 
 	void Start()
@@ -17,7 +17,8 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float t = Time.time - startTime;
+		t = Time.time - startTime;
+		
 		if (!hasWon)
 		{
 			timerText.text = saveTime = string.Format("{0:0}:{1:00.00}", t / 60, t % 60);
