@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 222238332794085482}
   - component: {fileID: 114656759583972506}
   m_Layer: 5
-  m_Name: OptionsText
+  m_Name: NextText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114370167563880678}
   - component: {fileID: 114583283137409238}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: Next
 --- !u!114 &114769732604381928
 MonoBehaviour:
   m_ObjectHideFlags: 1
