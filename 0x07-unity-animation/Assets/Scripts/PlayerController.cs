@@ -16,9 +16,11 @@ public class PlayerController : MonoBehaviour {
 
 	void LateUpdate()
 	{
-		if (transform.position.y < -10)
+		if (transform.position.y < -15)
 		{
 			transform.position = new Vector3(0f, 100f, 0f);
+			hasLanded = false;
+			animator.SetTrigger("IsFalling");
 		}
 	}
 	
