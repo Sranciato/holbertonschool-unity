@@ -135,6 +135,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
+  animator: {fileID: 1236626173}
 --- !u!114 &114838621859489312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400142, guid: 69a96a5271bc81c4dbd616c557240037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 400142, guid: 69a96a5271bc81c4dbd616c557240037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -374,11 +375,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 69a96a5271bc81c4dbd616c557240037, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: a18837919da98354b8826ef9aa36b8f8, type: 3}
+    - target: {fileID: 9500000, guid: 69a96a5271bc81c4dbd616c557240037, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9b09b7c0f86692c479e7d71d3d8fbc4f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a96a5271bc81c4dbd616c557240037, type: 3}
 --- !u!4 &1227064467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400142, guid: 69a96a5271bc81c4dbd616c557240037,
+    type: 3}
+  m_PrefabInstance: {fileID: 1227202461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1236626173 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 69a96a5271bc81c4dbd616c557240037,
     type: 3}
   m_PrefabInstance: {fileID: 1227202461}
   m_PrefabAsset: {fileID: 0}

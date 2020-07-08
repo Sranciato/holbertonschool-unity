@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 	public float gravity = -9.81f;
 	public LayerMask groundLayer;
 	public Animator animator;
+	private bool hasLanded = true;
 
 	private Vector3 velocity;
 
@@ -39,11 +40,19 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && isGrounded())
 		{
 			velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+			animator.SetTrigger("IsJumping");
 		}
+		if (!Physics.Raycast(transform.position, -Vector3.up, 1.4f, groundLayer))
+				hasLanded = false;
 		if (Input.GetKey(KeyCode.W))
 			animator.SetBool("IsRunning", true);
 		else
 			animator.SetBool("IsRunning", false);
+		if (isGrounded() && hasLanded == false)
+		{
+			animator.SetTrigger("HasLanded");
+			hasLanded = true;
+		}
 
 		velocity.y += gravity * Time.deltaTime;
 		characterController.Move(velocity * Time.deltaTime);
