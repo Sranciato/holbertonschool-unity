@@ -4147,6 +4147,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1685180025}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1647913044 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1236626173, guid: 8fa3ade025fd680479a7e959888e978e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2054759815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1654671115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5317,6 +5323,11 @@ PrefabInstance:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 1234391710}
+    - target: {fileID: 114547899722086194, guid: 8fa3ade025fd680479a7e959888e978e,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1647913044}
     - target: {fileID: 114838621859489312, guid: 8fa3ade025fd680479a7e959888e978e,
         type: 3}
       propertyPath: timerText

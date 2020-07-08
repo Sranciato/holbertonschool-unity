@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight = 3f;
 	public float gravity = -9.81f;
 	public LayerMask groundLayer;
+	public Animator animator;
 
 	private Vector3 velocity;
 
@@ -39,6 +40,10 @@ public class PlayerController : MonoBehaviour {
 		{
 			velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 		}
+		if (Input.GetKey(KeyCode.W))
+			animator.SetBool("IsRunning", true);
+		else
+			animator.SetBool("IsRunning", false);
 
 		velocity.y += gravity * Time.deltaTime;
 		characterController.Move(velocity * Time.deltaTime);
