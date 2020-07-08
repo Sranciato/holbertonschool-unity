@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	public float gravity = -9.81f;
 	public LayerMask groundLayer;
 	public Animator animator;
-	private bool hasLanded = true;
+	private bool hasLanded = true, hasFallen = false;
 
 	private Vector3 velocity;
 
@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour {
 		if (transform.position.y < -15)
 		{
 			transform.position = new Vector3(0f, 100f, 0f);
-			hasLanded = false;
-			animator.SetTrigger("IsFalling");
 		}
 	}
 	
@@ -30,6 +28,11 @@ public class PlayerController : MonoBehaviour {
 		if (isGrounded() && velocity.y < 0)
 		{
 			velocity.y = 0f;
+		}
+		if (transform.position.y < -14f)
+		{
+			hasFallen = true;
+			animator.SetBool("IsFalling", true);
 		}
 
 		float x = Input.GetAxis("Horizontal");
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 			velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 			animator.SetTrigger("IsJumping");
 		}
-		if (!Physics.Raycast(transform.position, -Vector3.up, 1.4f, groundLayer))
+		if (!isGrounded())
 				hasLanded = false;
 		if (Input.GetKey(KeyCode.W))
 			animator.SetBool("IsRunning", true);
@@ -54,6 +57,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			animator.SetTrigger("HasLanded");
 			hasLanded = true;
+		}
+		if (isGrounded() && hasFallen == true)
+		{
+			animator.SetBool("IsFalling", false);
+			animator.SetTrigger("HasFallen");
+			hasFallen = false;
 		}
 
 		velocity.y += gravity * Time.deltaTime;
