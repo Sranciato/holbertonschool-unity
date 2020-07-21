@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public CharacterController characterController;
+	public AudioSource playerRunning;
+	public AudioSource playerLanding;
+	
 	public float moveSpeed = 12f;
 	public float jumpHeight = 3f;
 	public float gravity = -9.81f;
@@ -50,9 +53,18 @@ public class PlayerController : MonoBehaviour {
 		if (!isGrounded())
 				hasLanded = false;
 		if (Input.GetKey(KeyCode.W))
+		{
 			animator.SetBool("IsRunning", true);
+			if (!playerRunning.isPlaying && isGrounded())
+				playerRunning.Play();
+			else if (playerRunning.isPlaying && !isGrounded())
+				playerRunning.Stop();
+		}
 		else
+		{
 			animator.SetBool("IsRunning", false);
+			playerRunning.Stop();
+		}
 		if (isGrounded() && hasLanded == false)
 		{
 			animator.SetTrigger("HasLanded");
@@ -62,6 +74,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			animator.SetBool("IsFalling", false);
 			animator.SetTrigger("HasFallen");
+			playerLanding.Play();
 			hasFallen = false;
 		}
 
